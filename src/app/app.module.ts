@@ -25,13 +25,15 @@ import {
 } from '@angular/material';
 import { PostListComponent } from './post-list/post-list.component';
 import { HeaderComponent } from './header/header.component';
+import { PostCrudComponent } from './post-crud/post-crud.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     PostListComponent,
-    HeaderComponent
+    HeaderComponent,
+    PostCrudComponent
   ],
   imports: [
     BrowserModule,

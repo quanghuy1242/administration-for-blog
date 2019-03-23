@@ -1,10 +1,15 @@
 .admin-btn {
   text-align: left;
-  font-size: 20px;
+  /*color: #fff;*/
+  /*font-size: 20px;*/
   /*padding-left: 0;*/
 }
 
 :host {
 	display: block;
 	width: 100%;
+}
+
+.header-wrapper {
+	background-color: #416275;
 }

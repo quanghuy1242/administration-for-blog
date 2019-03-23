@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { RouteDetectService } from '../services/route-detect.service';
 
 @Component({
   selector: 'app-navigation',
@@ -15,6 +16,9 @@ export class NavigationComponent {
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+  	private breakpointObserver: BreakpointObserver,
+  	private routeDetect: RouteDetectService
+  ) {}
 
 }

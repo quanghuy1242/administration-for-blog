@@ -11,6 +11,10 @@
 }
 
 .table-wrapper {
-	height: calc(100vh - 65px - 2rem - 65px - 57px);
+	height: calc(100vh - 69px - 2rem - 65px - 57px);
 	overflow: auto;
+}
+
+.mat-header-cell {
+	font-weight: bold;
 }
