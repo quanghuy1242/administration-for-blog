@@ -20,7 +20,8 @@ import {
   MatInputModule,
   MatTooltipModule,
   MatCardModule,
-  MatMenuModule
+  MatMenuModule,
+  MatBadgeModule
 } from '@angular/material';
 import { PostListComponent } from './post-list/post-list.component';
 import { HeaderComponent } from './header/header.component';
@@ -50,7 +51,8 @@ import { HeaderComponent } from './header/header.component';
     MatInputModule,
     MatTooltipModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

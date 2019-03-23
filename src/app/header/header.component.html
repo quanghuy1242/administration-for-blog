@@ -1,10 +1,9 @@
-<mat-card fxLayout="row">
+<div fxLayout="row" class="header-wrapper">
   <div fxLayout="column" fxLayoutAlign="center">
-    <mat-card-title>Post</mat-card-title>
-    <mat-card-subtitle>20 posts</mat-card-subtitle>
+  	<button mat-button class="admin-btn" matBadge="25" matBadgeColor="warn">POSTS</button>
   </div>
   <div style="flex: 1 1 auto"></div>
   <div fxLayout="row" fxLayoutAlign="center center">
     <ng-content></ng-content>
   </div>
-</mat-card>
+</div>

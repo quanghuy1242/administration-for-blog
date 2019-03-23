@@ -37,14 +37,9 @@
 
 .list-item-link {
   color: #fff;
+  border-radius: 0;
 }
 
-button {
-  color: #fff;
-}
-
-.admin-btn {
-  text-align: left;
-  font-size: 20px;
-  padding-left: 0;
+.active {
+  color: black;
 }
