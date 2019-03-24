@@ -18,7 +18,7 @@ export class NavigationComponent {
 
   constructor(
   	private breakpointObserver: BreakpointObserver,
-  	private routeDetect: RouteDetectService
+  	public routeDetect: RouteDetectService
   ) {}
 
 }

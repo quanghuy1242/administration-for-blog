@@ -9,11 +9,15 @@
       <div class="avatar"></div>
       <h3 class="avatar-title mat-h2">QUANG HUY</h3>
     </div>
-    <div class="list-item" fxLayout="column">
-      <a routerLink="/post" mat-button class="list-item-link" [class.active]="routeDetect.routeName === 'post'">Post</a>
-      <a mat-button class="list-item-link" [class.active]="routeDetect.routeName === 'category'">Category</a>
-      <a mat-button class="list-item-link" [class.active]="routeDetect.routeName === 'configuration'">Configuration</a>
-      <a mat-button class="list-item-link" [class.active]="routeDetect.routeName === 'accounts'">Accounts</a>
+    <div class="list-item" fxLayout="column" *ngFor="let route of routeDetect.routeObj">
+      <a 
+          routerLink="{{route.path}}" 
+          mat-button 
+          class="list-item-link" 
+          [class.active]="routeDetect.routeName === route.path">
+        <mat-icon [style.margin-right.rem]="0.5">{{route.icon}}</mat-icon>
+        {{route.name}}
+      </a>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>

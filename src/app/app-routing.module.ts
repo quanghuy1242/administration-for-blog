@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PostCrudComponent } from './post-crud/post-crud.component'
 
 const routes: Routes = [
-	{ path: 'post', component: PostCrudComponent }
+	{ path: 'post', component: PostCrudComponent,  }
 ];
 
 @NgModule({
