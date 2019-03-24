@@ -9,7 +9,6 @@ export class RouteDetectService {
   routeObj = [
     { path: '/dashboard', name: 'Dashboard', icon: 'dashboard' },
     { path: '/post', name: 'Posts', icon: 'book' },
-    { path: '/category', name: 'Category', icon: 'category' },
     { path: '/configuration', name: 'Configuration', icon: 'settings' },
     { path: '/accounts', name: 'Accounts', icon: 'account_box' }
   ]

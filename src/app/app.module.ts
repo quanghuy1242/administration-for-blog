@@ -5,27 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from '../material-module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { 
-  MatToolbarModule, 
-  MatButtonModule, 
-  MatSidenavModule, 
-  MatIconModule, 
-  MatListModule, 
-  MatTableModule, 
-  MatPaginatorModule, 
-  MatSortModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatTooltipModule,
-  MatCardModule,
-  MatMenuModule,
-  MatBadgeModule
-} from '@angular/material';
 import { PostListComponent } from './post-list/post-list.component';
 import { HeaderComponent } from './header/header.component';
 import { PostCrudComponent } from './post-crud/post-crud.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { ConfigurationComponent } from './configuration/configuration.component';
+import { AccountManagementComponent } from './account-management/account-management.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +22,10 @@ import { PostCrudComponent } from './post-crud/post-crud.component';
     NavigationComponent,
     PostListComponent,
     HeaderComponent,
-    PostCrudComponent
+    PostCrudComponent,
+    DashboardComponent,
+    ConfigurationComponent,
+    AccountManagementComponent
   ],
   imports: [
     BrowserModule,
@@ -41,20 +33,12 @@ import { PostCrudComponent } from './post-crud/post-crud.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTooltipModule,
+    MaterialModule,
+    MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatBadgeModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

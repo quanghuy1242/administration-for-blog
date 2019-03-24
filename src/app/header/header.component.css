@@ -4,7 +4,8 @@
 }
 
 .header-wrapper {
-	background-color: #416275;
+  background-color: #416275;
+  height: 64px;
 }
 
 .title {

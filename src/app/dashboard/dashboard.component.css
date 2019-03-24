@@ -1,0 +1,29 @@
+.dashboard-card {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: 0;
+  box-shadow: none !important;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+mat-grid-list {
+  margin-top: 1rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-card {
+  user-select: none;
+}

@@ -1,0 +1,80 @@
+<app-header>
+  <button mat-icon-button mat-raised-button matBadge="5" matBadgeColor="warn"><mat-icon>notifications</mat-icon></button>
+</app-header>
+<div class="dashboard-wrapper">
+  <mat-grid-list cols="4" rowHeight="150"  gutterSize="1rem">
+    <mat-grid-tile class="mat-elevation-z2">
+      <mat-card matRipple class="dashboard-card total-card center">
+        1
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile class="mat-elevation-z2">
+      <mat-card matRipple class="dashboard-card total-card center">
+        2
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile class="mat-elevation-z2">
+      <mat-card matRipple class="dashboard-card total-card center">
+        3
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile class="mat-elevation-z2">
+      <mat-card matRipple class="dashboard-card total-card center">
+        4
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="3" rowHeight="350" gutterSize="1rem">
+    <mat-grid-tile colspan="2" class="mat-elevation-z2">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>Posted per Week</mat-card-title>
+          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item>More infomation</button>
+            <button mat-menu-item>Remove</button>
+          </mat-menu>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          Chart
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile rowspan="2" class="mat-elevation-z2">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>Quick Panel</mat-card-title>
+          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item>More infomation</button>
+            <button mat-menu-item>Remove</button>
+          </mat-menu>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          Content
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" class="mat-elevation-z2">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>Post per Category</mat-card-title>
+          <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" xPosition="before">
+            <button mat-menu-item>More infomation</button>
+            <button mat-menu-item>Remove</button>
+          </mat-menu>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          Content
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
