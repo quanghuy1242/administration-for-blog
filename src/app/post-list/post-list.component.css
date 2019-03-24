@@ -18,3 +18,23 @@
 .mat-header-cell {
 	font-weight: bold;
 }
+
+.actions-wrapper {
+	margin-bottom: 1rem;
+}
+
+.filter-wrapper {
+	border: 1px solid rgb(0, 0, 0, 0.12);
+	border-radius: 4px;
+	width: 100%;
+}
+
+.filter-wrapper input {
+	width: 100%;
+	height: 100%;
+	padding-left: 0.5rem
+}
+
+.btn-center {
+	align-self: center;;
+}

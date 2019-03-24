@@ -1,6 +1,19 @@
-<mat-form-field>
-  <input matInput placeholder="Filter" (keyup)="applyFilter($event.target.value)">
-</mat-form-field>
+<div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="0.5rem" class="actions-wrapper">
+  <div>
+    <mat-button-toggle-group appearance="standard">
+      <mat-button-toggle value="post" checked="true">Post</mat-button-toggle>
+      <mat-button-toggle value="draft">Draft</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div class="filter-wrapper">
+    <input matInput placeholder="Filter" (keyup)="applyFilter($event.target.value)">
+  </div>
+  <button mat-icon-button class="btn-center"><mat-icon>refresh</mat-icon></button>
+  <button mat-icon-button class="btn-center" [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Summary</button>
+  </mat-menu>
+</div>
 <div class="mat-elevation-z8">
   <div class="table-wrapper">
     <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
