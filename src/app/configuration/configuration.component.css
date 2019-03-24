@@ -1,0 +1,35 @@
+.conf-wrapper {
+  height: calc(100vh - 2rem - 65px);
+}
+
+.actions-bar {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid rgb(0, 0 , 0, 0.12);
+}
+
+.content-wrapper {
+  padding: 1rem;
+  overflow: auto;
+  padding-top: 0;
+}
+
+mat-form-field mat-icon {
+  margin-right: 0.5rem;
+}
+
+.actions-bar button {
+  margin-left: 0.5rem;
+}
+
+.header-bar {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgb(0, 0 , 0, 0.12);
+}
+
+.header-bar .mat-headline {
+  margin: 0.2rem;
+  font-weight: 500;
+}

@@ -6,6 +6,7 @@
 .header-wrapper {
   background-color: #416275;
   height: 64px;
+  margin: -1rem -1rem 1rem -1rem;
 }
 
 .title {
@@ -13,4 +14,8 @@
   color: #fff;
   font-weight: 500;
   user-select: none;
+}
+
+mat-card {
+  border-radius: 0;
 }
