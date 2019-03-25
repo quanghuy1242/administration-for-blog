@@ -38,3 +38,23 @@
 .btn-center {
 	align-self: center;;
 }
+
+.mat-column-id {
+	width: 10%;
+}
+
+.mat-column-title {
+	width: 10%;
+}
+
+.mat-column-date {
+	width: 10%;
+}
+
+.mat-column-content {
+	width: 50%;
+}
+
+.mat-column-actions {
+	width: 20%;
+}

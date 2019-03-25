@@ -1,25 +1,26 @@
 <app-header></app-header>
 <div fxLayout="column" class="conf-wrapper">
-  <div fxLayout="row" fxFlexFill fxLayoutGap="1rem">
-    <div fxFlex="50" class="mat-elevation-z5">
-      <div fxLayout="column" fxFlexFill>
-        <mat-tab-group fxFlex="100" backgroundColor="primary">
+  <div fxLayout="row" fxFlexFill fxLayoutGap="1rem" fxLayoutAlign="center">
+    <div fxFlex="100" class="mat-elevation-z5">
+      <div fxLayout="column" fxFlexFill class="vertical-tap-wrapper">
+        <mat-tab-group fxFlex="100" backgroundColor="primary" animationDuration="0ms">
           <mat-tab label="Configurations">
-            <div class="content-wrapper" fxLayout="column">
+            <div class="content-wrapper">
               <mat-form-field appearance="standard">
                 <mat-label>Title of Blogs</mat-label>
                 <input matInput placeholder="God's Blog">
-                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-icon matSuffix>title</mat-icon>
                 <mat-hint></mat-hint>
               </mat-form-field>
               <mat-form-field appearance="standard">
                 <mat-label>Slogan of Blogs</mat-label>
                 <input matInput placeholder="God's home is where everything's started">
-                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-icon matSuffix>format_quote</mat-icon>
                 <mat-hint></mat-hint>
               </mat-form-field>
               <mat-form-field>
                 <textarea matInput placeholder="Bio"></textarea>
+                <mat-icon matSuffix>art_track</mat-icon>
               </mat-form-field>
               <mat-form-field>
                 <input matInput placeholder="Facebook">
@@ -49,6 +50,5 @@
         </div>
       </div>
     </div>
-    <div fxFlex="50" class="mat-elevation-z5">red</div>
   </div>
 </div>

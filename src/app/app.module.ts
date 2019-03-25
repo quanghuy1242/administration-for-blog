@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { AccountManagementComponent } from './account-management/account-management.component';
+import { ProjectsManagementComponent } from './projects-management/projects-management.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AccountManagementComponent } from './account-management/account-managem
     PostCrudComponent,
     DashboardComponent,
     ConfigurationComponent,
-    AccountManagementComponent
+    AccountManagementComponent,
+    ProjectsManagementComponent
   ],
   imports: [
     BrowserModule,

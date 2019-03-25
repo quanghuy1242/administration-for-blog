@@ -12,3 +12,39 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: rgba(61, 91, 109, 0.416);
   /*border-radius: 4px;*/
 }
+
+/* Vertical tab */
+.vertical-tap-wrapper mat-tab-group {
+  flex-direction: row;
+  overflow: auto;
+}
+
+.vertical-tap-wrapper .mat-tab-labels {
+  flex-direction: column;
+}
+
+.vertical-tap-wrapper mat-form-field {
+  width: 100%;
+}
+
+.vertical-tap-wrapper mat-ink-bar {
+  background-color: initial !important;
+}
+
+.vertical-tap-wrapper .mat-tab-body-content {
+  height: initial;
+}
+
+.vertical-tap-wrapper .mat-tab-label {
+  justify-content: flex-start;
+}
+
+.vertical-tap-wrapper .mat-tab-label-active {
+  border-right: 3px solid #ff4081;
+}
+
+.vertical-tap-wrapper .mat-tab-label {
+  opacity: 1;
+}
+
+/* end */

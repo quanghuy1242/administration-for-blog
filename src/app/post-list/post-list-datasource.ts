@@ -17,7 +17,7 @@ const EXAMPLE_DATA: PostListItem[] = [
   {id: 2, title: 'Helium', date: "abc", content: 'dsdsb ạbdba ậbs'},
   {id: 3, title: 'Lithium', date: "abc", content: 'dsdsb ạbdba ậbs'},
   {id: 4, title: 'Beryllium', date: "abc", content: 'dsdsb ạbdba ậbs'},
-  {id: 5, title: 'Boron', date: "abc", content: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius architecto laborum voluptas facere doloribus in quam, hic nemo explicabo alias veniam debitis sequi id cum rerum quia nulla, reiciendis sunt?'},
+  {id: 5, title: 'Boron', date: "abc", content: 'Mùa hoa lê kia ma nở, ở quê ta miền đất đở'},
   {id: 6, title: 'Carbon', date: "abc", content: 'dsdsb ạbdba ậbs'},
   {id: 7, title: 'Nitrogen', date: "abc", content: 'dsdsb ạbdba ậbs'},
   {id: 8, title: 'Oxygen', date: "abc", content: 'dsdsb ạbdba ậbs'},

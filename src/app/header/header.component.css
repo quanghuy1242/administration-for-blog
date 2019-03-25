@@ -19,3 +19,9 @@
 mat-card {
   border-radius: 0;
 }
+
+.button-toggle {
+  align-self: center;
+  color: #fff;
+  margin-right: 0.5rem;
+}
