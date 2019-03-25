@@ -15,3 +15,13 @@ Welcome!
 
 ## Configuration
 ## Accounts
+
+# Screenshot
+## Dashboard
+![Dashboard](screenshots\Screenshot%20(127).png)
+
+## Post CRUD
+![Post CRUD](screenshots\Screenshot%20(126).png)
+
+## Configuration
+![Post CRUD](screenshots\Screenshot%20(128).png)
