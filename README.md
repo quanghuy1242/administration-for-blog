@@ -18,10 +18,10 @@ Welcome!
 
 # Screenshot
 ## Dashboard
-![Dashboard](screenshots\Screenshot%20(127).png)
+![Dashboard](screenshots/dashboard.png)
 
 ## Post CRUD
-![Post CRUD](screenshots\Screenshot%20(126).png)
+![Post CRUD](screenshots/postcrud.png)
 
 ## Configuration
-![Post CRUD](screenshots\Screenshot%20(128).png)
+![Post CRUD](screenshots/conf.png)
