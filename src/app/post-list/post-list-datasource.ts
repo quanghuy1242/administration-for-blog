@@ -2,6 +2,8 @@ import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import { Blog } from '../models/blog.model';
+import { BlogService } from '../services/blog.service';
 
 // TODO: Replace this with your own data model type
 export interface PostListItem {
@@ -40,11 +42,14 @@ const EXAMPLE_DATA: PostListItem[] = [
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class PostListDataSource extends MatTableDataSource<PostListItem> {
-  data: PostListItem[] = EXAMPLE_DATA;
+export class PostListDataSource extends MatTableDataSource<Blog> {
+  data: Blog[];
 
-  constructor() {
+  constructor(
+    private blogService: BlogService
+  ) {
     super();
+    this.blogService.getBlogs().subscribe(blogs => this.data = blogs);
   }
 
   // /**
