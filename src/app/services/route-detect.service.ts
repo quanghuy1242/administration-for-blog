@@ -15,7 +15,7 @@ export class RouteDetectService {
   ]
   
   public get routeProperty() : Object {
-    return this.routeObj.find(route => route.path === this.routeName);
+    return this.routeObj.find(route => route.path === this.routeName) || { name: '' };
   }
 
   public get routeName() : string {

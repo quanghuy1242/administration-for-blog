@@ -1,0 +1,17 @@
+.mat-form-field {
+  width: 100%;
+}
+
+textarea {
+  height: calc(100vh - 64px - 81px - 7rem);
+  resize: none !important;
+}
+
+.config-post-panel {
+  height: calc(100vh - 64px - 2rem);
+  overflow: auto;
+}
+
+app-header button {
+  margin-left: 0.5rem;
+}

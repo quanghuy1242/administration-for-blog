@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { RouteDetectService } from '../services/route-detect.service';
 import { NavigationService } from '../services/navigation.service';
 
@@ -7,14 +7,20 @@ import { NavigationService } from '../services/navigation.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements AfterViewInit {
+  @ViewChild('title') title: ElementRef;
 
   constructor(
     public routeDetect: RouteDetectService,
     public navigationService: NavigationService
   ) { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+
+  }
+
+  setTitle(str: string): void {
+    this.title.nativeElement.innerText = str;
   }
 
 }

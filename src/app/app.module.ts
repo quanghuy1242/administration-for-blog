@@ -20,6 +20,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { AccountManagementComponent } from './account-management/account-management.component';
 import { ProjectsManagementComponent } from './projects-management/projects-management.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ProjectsManagementComponent } from './projects-management/projects-mana
     DashboardComponent,
     ConfigurationComponent,
     AccountManagementComponent,
-    ProjectsManagementComponent
+    ProjectsManagementComponent,
+    PostDetailComponent
   ],
   imports: [
     BrowserModule,

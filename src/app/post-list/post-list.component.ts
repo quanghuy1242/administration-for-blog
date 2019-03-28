@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { Blog } from '../models/blog.model';
-import { Observable } from 'rxjs';
+import { Observable, merge } from 'rxjs';
+import {catchError, map, startWith, switchMap} from 'rxjs/operators';
 import { BlogService } from '../services/blog.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class PostListComponent implements OnInit, AfterViewInit {
   dataSource = new MatTableDataSource<Blog>();
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'title', 'date', 'actions'];
+  displayedColumns = ['id', 'title', 'day', 'actions'];
 
   constructor(
     private blogService: BlogService
