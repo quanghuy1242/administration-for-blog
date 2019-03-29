@@ -18,7 +18,8 @@ import {
   MatRippleModule,
   MatTabsModule,
   MatButtonToggleModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatDialogModule
 } from '@angular/material';
 
 @NgModule({
@@ -41,7 +42,8 @@ import {
     MatRippleModule,
     MatTabsModule,
     MatButtonToggleModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule
   ]
 })
 export class MaterialModule {}

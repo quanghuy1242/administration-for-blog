@@ -17,6 +17,7 @@ export class BlogService {
     private readonly db: AngularFirestore
   ) { }
 
+  /** GET all post */
   getBlogs(): Observable<Blog[]> {
     return this.db.collection<Blog>('blogs', ref => ref.orderBy('day', 'desc')).snapshotChanges().pipe(
       map(actions => actions.map(a => {
@@ -27,6 +28,7 @@ export class BlogService {
     )
   }
 
+  /** GET a post by id */
   getBlog(id: string): Observable<Blog> {
     return this.db.doc<Blog>('blogs/' + id).snapshotChanges().pipe(
       map(action => {
@@ -35,5 +37,13 @@ export class BlogService {
         return { id, ...data };
       })
     )
+  }
+
+  /** UPDATE a post */
+  updatePost(id: string, post: any): Promise<void> {
+    return this.db.doc<Blog>('blogs/' + id).update({
+      title: post.title,
+      content: post.content
+    })
   }
 }

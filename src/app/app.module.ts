@@ -8,6 +8,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
 import { MonacoEditorModule } from 'ngx-monaco-editor';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,10 @@ import { ConfigurationComponent } from './configuration/configuration.component'
 import { AccountManagementComponent } from './account-management/account-management.component';
 import { ProjectsManagementComponent } from './projects-management/projects-management.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { DialogPreviewComponent } from './dialog-preview/dialog-preview.component';
+import { SafeHTMLPipe } from './pipes/safe-html.pipe';
+import { DialogAlertComponent } from './dialog-alert/dialog-alert.component';
+import { DialogConfirmComponent } from './dialog-confirm/dialog-confirm.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,16 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     ConfigurationComponent,
     AccountManagementComponent,
     ProjectsManagementComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    DialogPreviewComponent,
+    SafeHTMLPipe,
+    DialogAlertComponent,
+    DialogConfirmComponent
+  ],
+  entryComponents: [
+    DialogPreviewComponent,
+    DialogConfirmComponent,
+    DialogAlertComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +65,9 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     MaterialModule,
     MonacoEditorModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
