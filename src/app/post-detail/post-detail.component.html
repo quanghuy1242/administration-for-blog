@@ -1,5 +1,5 @@
 <app-header #header>
-  <button mat-raised-button>Preview</button>
+  <button mat-raised-button (click)="preview()">Preview</button>
   <button mat-raised-button color="accent">Update</button>
 </app-header>
 {{header.setTitle("Edit Post")}}
@@ -7,14 +7,13 @@
   <mat-card fxFlex="70" [style.margin-right.rem]="1">
     <mat-form-field appearance="standard">
       <mat-label>Post's title</mat-label>
-      <input matInput placeholder="Good Man">
+      <input matInput placeholder="Good Man" [value]="blog?.title">
       <mat-icon matSuffix>title</mat-icon>
       <mat-hint></mat-hint>
     </mat-form-field>
-    <mat-form-field>
-      <textarea matInput placeholder="Type your content here..."></textarea>
-      <mat-icon matSuffix>art_track</mat-icon>
-    </mat-form-field>
+    <div class="editor-wrapper">
+      <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+    </div>
   </mat-card>
   <mat-card fxFlex="30" class="config-post-panel">
     <mat-accordion>

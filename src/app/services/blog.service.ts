@@ -26,4 +26,14 @@ export class BlogService {
       }))
     )
   }
+
+  getBlog(id: string): Observable<Blog> {
+    return this.db.doc<Blog>('blogs/' + id).snapshotChanges().pipe(
+      map(action => {
+        const data = action.payload.data();
+        const id = action.payload.id;
+        return { id, ...data };
+      })
+    )
+  }
 }

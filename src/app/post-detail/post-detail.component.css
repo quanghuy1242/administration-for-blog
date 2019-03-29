@@ -15,3 +15,12 @@ textarea {
 app-header button {
   margin-left: 0.5rem;
 }
+
+.editor-wrapper ngx-monaco-editor {
+  height: calc(100vh - 64px - 81px - 6rem);
+  margin: 0.7rem;
+}
+
+.editor-wrapper {
+  border: 1px solid rgb(0, 0, 0, 0.12);
+}
