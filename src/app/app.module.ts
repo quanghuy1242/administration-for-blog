@@ -29,6 +29,8 @@ import { DialogPreviewComponent } from './dialog-preview/dialog-preview.componen
 import { SafeHTMLPipe } from './pipes/safe-html.pipe';
 import { DialogAlertComponent } from './dialog-alert/dialog-alert.component';
 import { DialogConfirmComponent } from './dialog-confirm/dialog-confirm.component';
+import { PostOptionSideComponent } from './post-option-side/post-option-side.component';
+import { PostNewComponent } from './post-new/post-new.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { DialogConfirmComponent } from './dialog-confirm/dialog-confirm.componen
     DialogPreviewComponent,
     SafeHTMLPipe,
     DialogAlertComponent,
-    DialogConfirmComponent
+    DialogConfirmComponent,
+    PostOptionSideComponent,
+    PostNewComponent
   ],
   entryComponents: [
     DialogPreviewComponent,

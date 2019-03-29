@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BlogService } from '../services/blog.service';
 import { Blog } from '../models/blog.model';
-import MarkdownIt from 'markdown-it';
 import { MatDialog } from '@angular/material';
 import { DialogPreviewComponent } from '../dialog-preview/dialog-preview.component';
 import { DialogConfirmComponent } from '../dialog-confirm/dialog-confirm.component';
@@ -22,11 +21,6 @@ export class PostDetailComponent implements OnInit {
   code: string = "";
   blogId: string;
   blog: Blog;
-  md = new MarkdownIt({
-    html: true,
-    linkify: true,
-    typographer: true,
-  });
   isLoading: boolean = true;
 
   constructor(
@@ -58,13 +52,25 @@ export class PostDetailComponent implements OnInit {
       width: '80%',
       data: {
         title: this.blog.title,
-        content: this.md.render(this.code)
+        content: this.code
       },
       disableClose: true
     })
   }
 
   update(): void {
+    if (this.blog.title === "" || this.code === "") {
+      this.dialog.open(DialogAlertComponent, {
+        width: '500px',
+        data: {
+          title: "Warning",
+          content: "Cannot empty!"
+        },
+        disableClose: true
+      })
+      return;
+    }
+
     const dialogRef = this.dialog.open(DialogConfirmComponent, {
       width: '500px',
       data: {
@@ -82,10 +88,47 @@ export class PostDetailComponent implements OnInit {
               width: '500px',
               data: {
                 title: "Information",
-                content: "Your post is update successfully!"
+                content: "Your post is updated successfully!"
               },
               disableClose: true
             })
+          })
+          .catch(() => {
+            this.dialog.open(DialogAlertComponent, {
+              width: '500px',
+              data: {
+                title: "Error",
+                content: "An error happennes. Try again!"
+              },
+              disableClose: true
+            })
+          })
+      }
+    })
+  }
+
+  delete(): void {
+    const dialogRef = this.dialog.open(DialogConfirmComponent, {
+      width: '500px',
+      data: {
+        title: "Confirm",
+        content: "Delete this post?"
+      },
+      disableClose: true
+    });
+
+    dialogRef.afterClosed().subscribe(isAccept => {
+      if (isAccept) {
+        this.blogService.deletePost(this.blogId)
+          .then(() => {
+            this.dialog.open(DialogAlertComponent, {
+              width: '500px',
+              data: {
+                title: "Information",
+                content: "Your post is deleted successfully!"
+              },
+              disableClose: true
+            }).afterClosed().subscribe(() => this.router.navigate(['/']))
           })
           .catch(() => {
             this.dialog.open(DialogAlertComponent, {

@@ -44,6 +44,16 @@ export class BlogService {
     return this.db.doc<Blog>('blogs/' + id).update({
       title: post.title,
       content: post.content
-    })
+    });
+  }
+
+  /** DELETE a post */
+  deletePost(id: string): Promise<void> {
+    return this.db.doc<Blog>('blogs/' + id).delete();
+  }
+
+  /** POST a post */
+  addPost(post: Blog): any {
+    return this.db.collection<Blog>('blogs').add(post);
   }
 }
