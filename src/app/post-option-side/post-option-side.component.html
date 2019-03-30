@@ -1,14 +1,53 @@
 <mat-accordion>
   <mat-expansion-panel [expanded]="true">
     <mat-expansion-panel-header>
-      <mat-panel-title>Basic</mat-panel-title>
+      <mat-panel-title>First Publish</mat-panel-title>
     </mat-expansion-panel-header>
-    Content
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
   </mat-expansion-panel>
   <mat-expansion-panel>
     <mat-expansion-panel-header>
-      <mat-panel-title>Advanced</mat-panel-title>
+      <mat-panel-title>Categories</mat-panel-title>
     </mat-expansion-panel-header>
-    Content
+    <mat-form-field>
+      <mat-label>Categories</mat-label>
+      <mat-select>
+        <mat-option value="uncategorized">Uncategorized</mat-option>
+        <mat-option value="romance">Romance</mat-option>
+        <mat-option value="hornor">Hornor</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div fxLayout="row" fxLayoutAlign="flex-end">
+      <button mat-button>Add new category</button>
+    </div>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Tags</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-form-field>
+      <mat-chip-list #chipList>
+        <mat-chip>Chip 1</mat-chip>
+        <mat-chip>Chip 2</mat-chip>
+      </mat-chip-list>
+      <input [matChipInputFor]="chipList">
+    </mat-form-field>
+  </mat-expansion-panel>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Image</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-form-field>
+      <mat-label>Url of the Featured Image</mat-label>
+      <input matInput>
+      <mat-icon matSuffix>close</mat-icon>
+    </mat-form-field>
+    <div fxLayout="row" fxLayoutAlign="flex-end">
+      <button mat-button>Preview Image</button>
+    </div>
   </mat-expansion-panel>
 </mat-accordion>

@@ -5,7 +5,7 @@
 </app-header>
 {{header.setTitle("Edit Post")}}
 <div fxLayout="row">
-  <mat-card fxFlex="65" [style.margin-right.rem]="1">
+  <mat-card fxFlex="70" [style.margin-right.rem]="1">
     <mat-form-field appearance="standard">
       <mat-label>Post's title</mat-label>
       <input matInput placeholder="Good Man" [value]="blog?.title" (input)="blog.title = $event.target.value" [disabled]="isLoading">
@@ -16,7 +16,7 @@
       <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
     </div>
   </mat-card>
-  <mat-card fxFlex="35" class="config-post-panel">
+  <mat-card fxFlex="30" class="config-post-panel">
     <app-post-option-side></app-post-option-side>
   </mat-card>
 </div>

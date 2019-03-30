@@ -19,7 +19,11 @@ import {
   MatTabsModule,
   MatButtonToggleModule,
   MatExpansionModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSelectModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatChipsModule
 } from '@angular/material';
 
 @NgModule({
@@ -43,7 +47,11 @@ import {
     MatTabsModule,
     MatButtonToggleModule,
     MatExpansionModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatChipsModule
   ]
 })
 export class MaterialModule {}
