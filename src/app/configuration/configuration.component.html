@@ -4,49 +4,62 @@
     <div fxFlex="100" class="mat-elevation-z5">
       <div fxLayout="column" fxFlexFill class="vertical-tap-wrapper">
         <mat-tab-group fxFlex="100" backgroundColor="primary" animationDuration="0ms">
-          <mat-tab label="Configurations">
+          <mat-tab label="Details">
             <div class="content-wrapper">
               <mat-form-field appearance="standard">
                 <mat-label>Title of Blogs</mat-label>
-                <input matInput placeholder="God's Blog">
+                <input matInput placeholder="God's Blog" [formControl]="mainTitle">
                 <mat-icon matSuffix>title</mat-icon>
                 <mat-hint></mat-hint>
               </mat-form-field>
               <mat-form-field appearance="standard">
                 <mat-label>Slogan of Blogs</mat-label>
-                <input matInput placeholder="God's home is where everything's started">
+                <input matInput placeholder="God's home is where everything's started" [formControl]="slogan">
                 <mat-icon matSuffix>format_quote</mat-icon>
                 <mat-hint></mat-hint>
               </mat-form-field>
               <mat-form-field>
-                <textarea matInput placeholder="Bio"></textarea>
+                <textarea matInput placeholder="Bio" [formControl]="bio"></textarea>
                 <mat-icon matSuffix>art_track</mat-icon>
               </mat-form-field>
               <mat-form-field>
-                <input matInput placeholder="Facebook">
+                <input matInput placeholder="Facebook" [formControl]="facebookUrl">
                 <mat-icon matPrefix>link</mat-icon>
               </mat-form-field>
               <mat-form-field>
-                <input matInput placeholder="Twitter">
+                <input matInput placeholder="Twitter" [formControl]="twitterUrl">
                 <mat-icon matPrefix>link</mat-icon>
               </mat-form-field>
               <mat-form-field>
-                <input matInput placeholder="Instagram">
+                <input matInput placeholder="Instagram" [formControl]="instagramUrl">
                 <mat-icon matPrefix>link</mat-icon>
               </mat-form-field>
               <mat-form-field>
-                <input matInput placeholder="Wordpress">
+                <input matInput placeholder="Wordpress" [formControl]="wordpressUrl">
                 <mat-icon matPrefix>link</mat-icon>
               </mat-form-field>
             </div>
           </mat-tab>
-          <mat-tab label="Images">
-
+          <mat-tab label="Visions">
+            <div class="content-wrapper">
+              <mat-form-field>
+                <input matInput placeholder="Image at homepage" [formControl]="homeImageUrl">
+                <mat-icon matPrefix>link</mat-icon>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Cover" [formControl]="coverUrl">
+                <mat-icon matPrefix>link</mat-icon>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Large cover" [formControl]="largeCover">
+                <mat-icon matPrefix>link</mat-icon>
+              </mat-form-field>
+            </div>
           </mat-tab>
         </mat-tab-group>
         <div class="actions-bar">
           <button mat-raised-button>Preview</button>
-          <button mat-raised-button color="primary">Update</button>
+          <button mat-raised-button color="primary" (click)="updateConf()">Update</button>
         </div>
       </div>
     </div>

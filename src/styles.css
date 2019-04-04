@@ -47,6 +47,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   opacity: 1;
 }
 
+.vertical-tap-wrapper .mat-tab-body-wrapper {
+  padding-top: 0.5rem;
+  width: 100%;
+}
+
 /* end */
 
 /* markdown */
