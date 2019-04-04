@@ -17,5 +17,6 @@ app-header button {
 }
 
 .editor-wrapper {
-  border: 1px solid rgb(0, 0, 0, 0.12);
+  border: 1px solid;
+  border-color: rgb(0, 0, 0, 0.12);
 }

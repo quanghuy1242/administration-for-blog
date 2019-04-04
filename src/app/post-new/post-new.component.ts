@@ -67,7 +67,7 @@ export class PostNewComponent implements OnInit {
         },
         disableClose: true
       }).afterClosed().subscribe(() => this.router.navigate(['/post']))
-    }).catch(() => {
+    }).catch((e) => {
       this.dialog.open(DialogAlertComponent, {
         width: '500px',
         data: {
@@ -76,6 +76,7 @@ export class PostNewComponent implements OnInit {
         },
         disableClose: true
       })
+      console.log(e);
     })
   }
 
