@@ -32,6 +32,8 @@ import { DialogConfirmComponent } from './dialog-confirm/dialog-confirm.componen
 import { PostOptionSideComponent } from './post-option-side/post-option-side.component';
 import { PostNewComponent } from './post-new/post-new.component';
 import { LoginComponent } from './login/login.component';
+import { DialogCategoryComponent } from './dialog-category/dialog-category.component';
+import { CategoryItemComponent } from './category-item/category-item.component';
 
 @NgModule({
   declarations: [
@@ -51,12 +53,15 @@ import { LoginComponent } from './login/login.component';
     DialogConfirmComponent,
     PostOptionSideComponent,
     PostNewComponent,
-    LoginComponent
+    LoginComponent,
+    DialogCategoryComponent,
+    CategoryItemComponent
   ],
   entryComponents: [
     DialogPreviewComponent,
     DialogConfirmComponent,
-    DialogAlertComponent
+    DialogAlertComponent,
+    DialogCategoryComponent
   ],
   imports: [
     BrowserModule,

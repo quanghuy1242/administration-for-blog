@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Categories</h1>
+<div mat-dialog-content class="mat-typography content">
+  <div class="category-add">
+    <mat-form-field>
+      <input matInput placeholder="New category" #input>
+    </mat-form-field>
+    <div class="center" [style.margin-left.rem]="0.5">
+      <button mat-raised-button color="primary" (click)="addCategory(input.value); input.value = ''">Add</button>
+    </div>
+  </div>
+  <mat-list>
+    <mat-list-item *ngFor="let category of items">
+      <span>{{category.name}}</span>
+      <div class="spacer"></div>
+      <mat-icon>close</mat-icon>
+    </mat-list-item>
+  </mat-list>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close color="primary">Close</button>
+</div>

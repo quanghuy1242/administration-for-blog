@@ -1,0 +1,33 @@
+.mat-dialog-content {
+  height: calc(100% - 32px - 68px);
+}
+
+.category-add {
+  display: flex;
+}
+
+.category-add .mat-form-field {
+  flex-grow: 1;
+}
+
+.mat-list {
+  height: calc(100% - 32px - 68px);
+  overflow-y: auto;
+}
+
+.mat-list-item {
+  transition: 0.2s;
+}
+
+.mat-list-item .mat-icon {
+  display: none;
+  transition: 0.2s;
+}
+
+.mat-list-item:hover .mat-icon {
+  display: block;
+}
+
+.mat-list-item:hover {
+  background-color: rgb(0, 0, 0, 0.12);
+}
