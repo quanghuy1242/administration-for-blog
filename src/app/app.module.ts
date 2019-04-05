@@ -31,6 +31,7 @@ import { DialogAlertComponent } from './dialog-alert/dialog-alert.component';
 import { DialogConfirmComponent } from './dialog-confirm/dialog-confirm.component';
 import { PostOptionSideComponent } from './post-option-side/post-option-side.component';
 import { PostNewComponent } from './post-new/post-new.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { PostNewComponent } from './post-new/post-new.component';
     DialogAlertComponent,
     DialogConfirmComponent,
     PostOptionSideComponent,
-    PostNewComponent
+    PostNewComponent,
+    LoginComponent
   ],
   entryComponents: [
     DialogPreviewComponent,

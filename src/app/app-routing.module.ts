@@ -7,16 +7,19 @@ import { AccountManagementComponent } from './account-management/account-managem
 import { ProjectsManagementComponent } from './projects-management/projects-management.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { PostNewComponent } from './post-new/post-new.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
-	{ path: 'post', component: PostCrudComponent },
-	{ path: 'post/:id/edit', component: PostDetailComponent },
-	{ path: 'post/new', component: PostNewComponent },
-	{ path: 'configuration', component: ConfigurationComponent },
-	{ path: 'projects', component: ProjectsManagementComponent },
-	{ path: 'accounts', component: AccountManagementComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+	{ path: 'post', component: PostCrudComponent, canActivate: [AuthGuard] },
+	{ path: 'post/:id/edit', component: PostDetailComponent, canActivate: [AuthGuard] },
+	{ path: 'post/new', component: PostNewComponent, canActivate: [AuthGuard] },
+	{ path: 'configuration', component: ConfigurationComponent, canActivate: [AuthGuard] },
+	{ path: 'projects', component: ProjectsManagementComponent, canActivate: [AuthGuard] },
+	{ path: 'accounts', component: AccountManagementComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

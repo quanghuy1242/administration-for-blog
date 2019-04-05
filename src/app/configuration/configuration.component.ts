@@ -49,15 +49,15 @@ export class ConfigurationComponent implements OnInit {
 
   hasError(): boolean {
     if (
-      this.mainTitle.hasError('required') || 
-      this.bio.hasError('required') || 
-      this.slogan.hasError('required') || 
-      this.facebookUrl.hasError('required') || 
-      this.instagramUrl.hasError('required') || 
-      this.twitterUrl.hasError('required') || 
-      this.wordpressUrl.hasError('required') || 
-      this.homeImageUrl.hasError('required') || 
-      this.coverUrl.hasError('required') || 
+      this.mainTitle.hasError('required') ||
+      this.bio.hasError('required') ||
+      this.slogan.hasError('required') ||
+      this.facebookUrl.hasError('required') ||
+      this.instagramUrl.hasError('required') ||
+      this.twitterUrl.hasError('required') ||
+      this.wordpressUrl.hasError('required') ||
+      this.homeImageUrl.hasError('required') ||
+      this.coverUrl.hasError('required') ||
       this.largeCover.hasError('required')
     ) {
       return true;
@@ -108,5 +108,4 @@ export class ConfigurationComponent implements OnInit {
       })
     }
   }
-
 }
