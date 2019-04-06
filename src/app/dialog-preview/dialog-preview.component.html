@@ -1,8 +1,9 @@
 <h1 mat-dialog-title>{{data.title}}</h1>
 <div 
     mat-dialog-content 
-    class="mat-typography content" 
-    [innerHTML]="md.render(data.content) | safeHTML">
+    class="mat-typography content markdown-body" 
+    appHeighlightCode
+    [innerHTML]="displayContent | safeHTML">
 </div>
 <div mat-dialog-actions align="end">
   <button mat-raised-button mat-dialog-close color="primary">Close</button>

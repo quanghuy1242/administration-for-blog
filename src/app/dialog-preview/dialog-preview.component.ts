@@ -14,12 +14,15 @@ export class DialogPreviewComponent implements OnInit {
     linkify: true,
     typographer: true,
   });
+
+  displayContent: string;
   
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DialogData
   ) { }
 
   ngOnInit() {
+    this.displayContent = this.md.render(this.data.content);
   }
 
 }

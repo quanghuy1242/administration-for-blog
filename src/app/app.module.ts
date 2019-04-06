@@ -34,6 +34,7 @@ import { PostNewComponent } from './post-new/post-new.component';
 import { LoginComponent } from './login/login.component';
 import { DialogCategoryComponent } from './dialog-category/dialog-category.component';
 import { CategoryItemComponent } from './category-item/category-item.component';
+import { HeighlightCodeDirective } from './directives/heighlight-code.directive';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { CategoryItemComponent } from './category-item/category-item.component';
     PostNewComponent,
     LoginComponent,
     DialogCategoryComponent,
-    CategoryItemComponent
+    CategoryItemComponent,
+    HeighlightCodeDirective
   ],
   entryComponents: [
     DialogPreviewComponent,

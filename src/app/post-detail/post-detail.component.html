@@ -1,5 +1,11 @@
 <app-header #header>
-  <button mat-raised-button (click)="delete()">Delete</button>
+  <button mat-icon-button [matMenuTriggerFor]="appMenu">
+    <mat-icon style="color: #fff">more_vert</mat-icon>
+  </button>
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item (click)="delete()">Delete</button>
+    <a [attr.href]="'https://quanghuy.netlify.com/post/' + blogId" target="_blank" mat-menu-item>Open in Blog page</a>
+  </mat-menu>
   <button mat-raised-button (click)="preview()">Preview</button>
   <button mat-raised-button color="accent" (click)="update()">Update</button>
 </app-header>
