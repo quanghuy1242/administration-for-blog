@@ -1,6 +1,6 @@
 <app-header #header>
   <button mat-raised-button (click)="preview()">Preview</button>
-  <button mat-raised-button color="accent" (click)="addPost()">Post this</button>
+  <button mat-raised-button color="accent" (click)="addPost(option.options)">Post this</button>
 </app-header>
 {{header.setTitle("New Post")}}
 <div fxLayout="row">
@@ -16,6 +16,6 @@
     </div>
   </mat-card>
   <mat-card fxFlex="35" class="config-post-panel">
-    <app-post-option-side></app-post-option-side>
+    <app-post-option-side #option></app-post-option-side>
   </mat-card>
 </div>

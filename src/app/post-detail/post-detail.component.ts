@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BlogService } from '../services/blog.service';
 import { Blog } from '../models/blog.model';
@@ -22,6 +22,7 @@ export class PostDetailComponent implements OnInit {
   blogId: string;
   blog: Blog;
   isLoading: boolean = true;
+  @ViewChild('option') option;
 
   constructor(
     private route: ActivatedRoute,
@@ -41,6 +42,7 @@ export class PostDetailComponent implements OnInit {
         this.router.navigate(['/']);
       } else {
         this.blog = blog;
+        this.option.options.category = blog.category || "8yOgXtjmkpaBOT7Hb7pv";
         this.code = this.blog.content;
         this.isLoading = false;
       }
@@ -58,7 +60,7 @@ export class PostDetailComponent implements OnInit {
     })
   }
 
-  update(): void {
+  update(option: any): void {
     if (this.blog.title === "" || this.code === "") {
       this.dialog.open(DialogAlertComponent, {
         width: '500px',
@@ -82,8 +84,11 @@ export class PostDetailComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(isAccept => {
       if (isAccept) {
-        this.blogService.updatePost(this.blogId, { title: this.blog.title, content: this.code })
-          .then(() => {
+        this.blogService.updatePost(this.blogId, { 
+          title: this.blog.title, 
+          content: this.code,
+          category: option.category
+        }).then(() => {
             this.dialog.open(DialogAlertComponent, {
               width: '500px',
               data: {

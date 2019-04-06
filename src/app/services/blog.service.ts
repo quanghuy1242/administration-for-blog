@@ -43,7 +43,8 @@ export class BlogService {
   updatePost(id: string, post: any): Promise<void> {
     return this.db.doc<Blog>('blogs/' + id).update({
       title: post.title,
-      content: post.content
+      content: post.content,
+      category: post.category
     });
   }
 

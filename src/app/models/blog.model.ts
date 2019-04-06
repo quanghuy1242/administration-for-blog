@@ -7,4 +7,8 @@ export interface Blog {
   content: string;
   isRichContent?: boolean;
   previewMardown?: string;
+  category?: string;
+  tags?: string[];
+  firstPublish?: Timestamp;
+  image?: string;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DialogPreviewComponent } from '../dialog-preview/dialog-preview.component';
 import { MatDialog } from '@angular/material';
 import { DialogAlertComponent } from '../dialog-alert/dialog-alert.component';
@@ -19,6 +19,7 @@ export class PostNewComponent implements OnInit {
   };
   title: string = "";
   content: string = "";
+  @ViewChild('option') option;
 
   constructor(
     private dialog: MatDialog,
@@ -27,6 +28,11 @@ export class PostNewComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.selectedFirstCategory();
+  }
+
+  selectedFirstCategory(): void {
+    this.option.options.category = "8yOgXtjmkpaBOT7Hb7pv";
   }
 
   preview(): void {
@@ -40,7 +46,8 @@ export class PostNewComponent implements OnInit {
     })
   }
 
-  addPost(): void {
+  addPost(option: any): void {
+    console.log(option);
     if (this.title === "" || this.content === "") {
       this.dialog.open(DialogAlertComponent, {
         width: '500px',
@@ -57,7 +64,8 @@ export class PostNewComponent implements OnInit {
       title: this.title,
       content: this.content,
       day: (new Date()) as unknown as Timestamp,
-      isRichContent: true
+      isRichContent: true,
+      category: option.category
     }).then(() => {
       this.dialog.open(DialogAlertComponent, {
         width: '500px',
@@ -67,7 +75,7 @@ export class PostNewComponent implements OnInit {
         },
         disableClose: true
       }).afterClosed().subscribe(() => this.router.navigate(['/post']))
-    }).catch((e) => {
+    }).catch((e: any) => {
       this.dialog.open(DialogAlertComponent, {
         width: '500px',
         data: {

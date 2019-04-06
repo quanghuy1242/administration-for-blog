@@ -7,7 +7,7 @@
     <a [attr.href]="'https://quanghuy.netlify.com/post/' + blogId" target="_blank" mat-menu-item>Open in Blog page</a>
   </mat-menu>
   <button mat-raised-button (click)="preview()">Preview</button>
-  <button mat-raised-button color="accent" (click)="update()">Update</button>
+  <button mat-raised-button color="accent" (click)="update(option.options)">Update</button>
 </app-header>
 {{header.setTitle("Edit Post")}}
 <div fxLayout="row">
@@ -23,6 +23,6 @@
     </div>
   </mat-card>
   <mat-card fxFlex="30" class="config-post-panel">
-    <app-post-option-side></app-post-option-side>
+    <app-post-option-side #option></app-post-option-side>
   </mat-card>
 </div>
