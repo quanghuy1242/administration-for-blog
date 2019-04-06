@@ -48,7 +48,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .vertical-tap-wrapper .mat-tab-body-wrapper {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   width: 100%;
 }
 

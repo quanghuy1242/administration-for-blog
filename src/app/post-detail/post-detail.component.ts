@@ -27,7 +27,7 @@ export class PostDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private blogService: BlogService,
     private router: Router,
-    private dialog: MatDialog
+    private dialog: MatDialog,
   ) { }
 
   ngOnInit() {

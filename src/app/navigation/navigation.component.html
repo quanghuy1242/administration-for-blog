@@ -2,7 +2,8 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="!(isHandset$ | async)">
+      [opened]="!(isHandset$ | async)"
+      (closed)="onToggleDrawer()" (opened)="onToggleDrawer()">
     <div class="avatar-wrapper"
         fxLayout="column"
         fxLayoutAlign="center center">

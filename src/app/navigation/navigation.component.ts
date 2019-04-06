@@ -28,4 +28,8 @@ export class NavigationComponent implements AfterViewInit {
     public navigationService: NavigationService
   ) {}
 
+  onToggleDrawer(): void {
+    window.dispatchEvent(new Event('resize'));
+  }
+
 }
