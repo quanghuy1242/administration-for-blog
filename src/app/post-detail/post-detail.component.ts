@@ -60,7 +60,8 @@ export class PostDetailComponent implements OnInit {
     })
   }
 
-  update(option: any): void {
+  checkValid(): boolean {
+    let firstCharacter: string = this.code.split('\n')[0].split('')[0];
     if (this.blog.title === "" || this.code === "") {
       this.dialog.open(DialogAlertComponent, {
         width: '500px',
@@ -70,9 +71,24 @@ export class PostDetailComponent implements OnInit {
         },
         disableClose: true
       })
-      return;
+      return false;
+    } else if (!/[A-Za-z>]/.test(firstCharacter)) {
+      this.dialog.open(DialogAlertComponent, {
+        width: '500px',
+        data: {
+          title: "Warning",
+          content: "Your first character of first line (first paragraph) must not be a special character, digit, exclude <"
+        },
+        disableClose: true
+      })
+      return false;
     }
+    return true;
+  }
 
+  update(option: any): void {
+    if (!this.checkValid()) { return; }
+    
     const dialogRef = this.dialog.open(DialogConfirmComponent, {
       width: '500px',
       data: {
