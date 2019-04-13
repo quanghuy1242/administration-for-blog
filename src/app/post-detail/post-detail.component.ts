@@ -16,7 +16,9 @@ export class PostDetailComponent implements OnInit {
   editorOptions = {
     theme: 'vs-light',
     language: 'markdown',
-    wordWrap: 'on'
+    wordWrap: 'on',
+    fontFamily: 'Roboto Mono',
+    fontSize: 13.5
   };
   code: string = "";
   blogId: string;
@@ -42,8 +44,10 @@ export class PostDetailComponent implements OnInit {
         this.router.navigate(['/']);
       } else {
         this.blog = blog;
-        this.option.options.category = blog.category || "8yOgXtjmkpaBOT7Hb7pv";
         this.code = this.blog.content;
+        // load conf
+        this.option.options.category = blog.category || "8yOgXtjmkpaBOT7Hb7pv";
+        this.option.options.tags = blog.tags;
         this.isLoading = false;
       }
     });

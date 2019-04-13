@@ -15,7 +15,9 @@ export class PostNewComponent implements OnInit {
   editorOptions = {
     theme: 'vs-light',
     language: 'markdown',
-    wordWrap: 'on'
+    wordWrap: 'on',
+    fontFamily: 'Roboto Mono',
+    fontSize: 13.5
   };
   title: string = "";
   content: string = "";
@@ -32,7 +34,7 @@ export class PostNewComponent implements OnInit {
   }
 
   selectedFirstCategory(): void {
-    this.option.options.category = "8yOgXtjmkpaBOT7Hb7pv";
+    this.option.options.category = '8yOgXtjmkpaBOT7Hb7pv'
   }
 
   preview(): void {
