@@ -1,5 +1,5 @@
 <mat-accordion>
-  <mat-expansion-panel [expanded]="true">
+  <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>First Publish</mat-panel-title>
     </mat-expansion-panel-header>
@@ -9,7 +9,7 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
   </mat-expansion-panel>
-  <mat-expansion-panel>
+  <mat-expansion-panel [expanded]="true">
     <mat-expansion-panel-header>
       <mat-panel-title>Categories</mat-panel-title>
     </mat-expansion-panel-header>
@@ -29,10 +29,21 @@
     </mat-expansion-panel-header>
     <mat-form-field>
       <mat-chip-list #chipList>
-        <mat-chip>Chip 1</mat-chip>
-        <mat-chip>Chip 2</mat-chip>
+        <mat-chip 
+            *ngFor="let tag of options.tags" 
+            [selectable]="selectable"
+            [removable]="removable"
+            (removed)="removeChip(tag)">
+          {{tag}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input 
+            placeholder="New tag..." 
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="addOnBlur"
+            (matChipInputTokenEnd)="addChip($event)">
       </mat-chip-list>
-      <input [matChipInputFor]="chipList">
     </mat-form-field>
   </mat-expansion-panel>
   <mat-expansion-panel>

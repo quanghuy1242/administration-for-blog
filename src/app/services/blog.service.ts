@@ -44,7 +44,8 @@ export class BlogService {
     return this.db.doc<Blog>('blogs/' + id).update({
       title: post.title,
       content: post.content,
-      category: post.category
+      category: post.category,
+      tags: post.tags
     });
   }
 

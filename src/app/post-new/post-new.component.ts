@@ -80,7 +80,8 @@ export class PostNewComponent implements OnInit {
       content: this.content,
       day: (new Date()) as unknown as Timestamp,
       isRichContent: true,
-      category: option.category
+      category: option.category,
+      tags: option.tags
     }).then(() => {
       this.dialog.open(DialogAlertComponent, {
         width: '500px',

@@ -103,7 +103,8 @@ export class PostDetailComponent implements OnInit {
         this.blogService.updatePost(this.blogId, { 
           title: this.blog.title, 
           content: this.code,
-          category: option.category
+          category: option.category,
+          tags: option.tags
         }).then(() => {
             this.dialog.open(DialogAlertComponent, {
               width: '500px',
