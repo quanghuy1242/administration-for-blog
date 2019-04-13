@@ -47,7 +47,7 @@ export class PostDetailComponent implements OnInit {
         this.code = this.blog.content;
         // load conf
         this.option.options.category = blog.category || "8yOgXtjmkpaBOT7Hb7pv";
-        this.option.options.tags = blog.tags;
+        this.option.options.tags = blog.tags || [];
         this.isLoading = false;
       }
     });
